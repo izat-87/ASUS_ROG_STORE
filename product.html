@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>ROG PRODUCT.KG</title>
+
+<style>
+body{
+  background:#111;
+  color:white;
+  font-family:Arial;
+  padding:40px;
+}
+
+.container{
+display:flex;
+align-items:flex-start;
+justify-content:center;
+gap:50px;
+}
+
+.left{
+flex:1;
+max-width:550px;
+}
+
+.left img{
+width:100%;
+max-width:500px;
+height:auto;
+}
+
+.right{
+flex:1;
+max-width:1300px;
+}
+
+.price{
+  font-size:28px;
+  color:red;
+  margin:15px 0;
+}
+
+.specs{
+  background:#1a1a1a;
+  padding:20px;
+  border-radius:12px;
+}
+
+.specs p{
+  margin:10px 0;
+}
+
+/* описание снизу */
+.desc{
+  margin-top:30px;
+  max-width:900px;
+  opacity:0.9;
+}
+
+/* кнопка */
+button{
+  margin-top:20px;
+  padding:12px 25px;
+  background:red;
+  color:white;
+  border:none;
+  border-radius:8px;
+  cursor:pointer;
+}
+
+button:hover{
+  background:darkred;
+}
+
+/* адаптив */
+@media(max-width:900px){
+  .container{
+    flex-direction:column;
+  }
+}
+</style>
+
+</head>
+
+<body>
+
+<h1 id="title"></h1>
+
+<div class="container">
+
+  <!-- ЛЕВО -->
+  <div class="left">
+    <img id="photo">
+  </div>
+
+  <!-- ПРАВО -->
+  <div class="right">
+
+    <div class="specs">
+      <h2>Specifications</h2>
+      <p id="spec1"></p>
+      <p id="spec2"></p>
+      <p id="spec3"></p>
+    </div>
+
+    <div class="price" id="price"></div>
+
+    
+    <button class="buy">Buy</button>
+
+<a href="asus_rog.html">
+  <button class="back">Back To Store</button>
+</a>
+  </div>
+
+</div>
+
+<!-- ОПИСАНИЕ СНИЗУ -->
+<div class="desc">
+  <p id="info"></p>
+</div>
+
+<script>
+
+let item = new URLSearchParams(window.location.search).get("item");
+
+if(item=="monitor"){
+title.innerText="ASUS ROG SWIFT";
+photo.src="media/img/ASUS ROG SWIFT .jpeg";
+spec1.innerText="240Hz Refresh Rate";
+spec2.innerText="1ms Response Time";
+spec3.innerText="1440p IPS Panel";
+info.innerText="Perfect monitor for esports and competitive gaming.";
+price.innerText="$750";
+}
+
+if(item=="keyboard"){
+title.innerText="ROG Falcata";
+photo.src="media/img/ASUS ROG Falcata.jpeg";
+spec1.innerText="Mechanical switches";
+spec2.innerText="RGB lighting";
+spec3.innerText="Pro gaming build";
+info.innerText="Fast and durable keyboard for gamers.";
+price.innerText="$149";
+}
+
+if(item=="mouse"){
+title.innerText="ROG Mouse";
+photo.src="media/img/Asus Rog Spatha - Gaming Mouse Terlaris.jpeg";
+spec1.innerText="High precision sensor";
+spec2.innerText="Wireless support";
+spec3.innerText="Low latency";
+info.innerText="Competitive gaming mouse.";
+price.innerText="$90";
+}
+
+if(item=="headset"){
+title.innerText="ROG Headset";
+photo.src="media/img/Игровая гарнитура Asus ROG Centurion содержит 10 излучателей и док-станцию с усилителем.jpeg";
+spec1.innerText="7.1 Surround";
+spec2.innerText="Noise canceling";
+spec3.innerText="Deep bass sound";
+info.innerText="Immersive gaming audio.";
+price.innerText="$229";
+}
+
+if(item=="laptop"){
+title.innerText="ROG Laptop";
+photo.src="media/img/novo computador 💜👾.jpeg";
+spec1.innerText="RTX GPU";
+spec2.innerText="High refresh display";
+spec3.innerText="Gaming performance";
+info.innerText="Powerful gaming laptop.";
+price.innerText="$2490";
+}
+
+if(item=="pc"){
+title.innerText="ROG Gaming PC";
+photo.src="media/img/What do you think of this setup_ Is this ROG! Be sure to visit_ https___www_furymachine.jpeg";
+spec1.innerText="Extreme performance";
+spec2.innerText="Custom RGB";
+spec3.innerText="High-end build";
+info.innerText="Full gaming setup.";
+price.innerText="$3490";
+}
+
+if(item=="phone"){
+title.innerText="ROG Phone";
+photo.src="media/img/Asus Rog Phone 9 Fe 12_512Gb Garansi Resmi.jpeg";
+spec1.innerText="Snapdragon flagship";
+spec2.innerText="Gaming triggers";
+spec3.innerText="High refresh screen";
+info.innerText="Gaming smartphone.";
+price.innerText="$1199";
+}
+
+if(item=="motherboard"){
+title.innerText="ROG Motherboard";
+photo.src="media/img/Z490 motherboard guide.jpeg";
+spec1.innerText="Intel support";
+spec2.innerText="Overclock ready";
+spec3.innerText="RGB sync";
+info.innerText="Premium motherboard.";
+price.innerText="$890";
+}
+
+if(item=="glasses"){
+title.innerText="ROG XREAL R1";
+photo.src="media/img/ASUS unveils sunglasses.jpeg";
+spec1.innerText="Smart display";
+spec2.innerText="AR support";
+spec3.innerText="Lightweight design";
+info.innerText="Future gaming glasses.";
+price.innerText="$899";
+}
+
+if(item=="gpu"){
+title.innerText="ROG RTX 5090";
+photo.src="media/img/NVIDIA RTX 5050 .jpeg";
+spec1.innerText="32GB GDDR7";
+spec2.innerText="DLSS 4";
+spec3.innerText="Extreme power";
+info.innerText="Top gaming GPU.";
+price.innerText="$2490";
+}
+document.querySelector(".buy").onclick = function(){
+  alert("The purchase was successful!");
+};
+</script>
+
+</body>
+</html>
+
